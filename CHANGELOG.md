@@ -1,5 +1,11 @@
 # @mhasanince/sandbox
 
+## 0.1.1
+
+### Patch Changes
+
+- 04a76c2: remove GitHub Actions release workflow file
+
 ## 0.1.0
 
 ### Minor Changes
