@@ -39,6 +39,7 @@ jobs:
         id: changesets
         uses: changesets/action@v1
         with:
+          commit: 'chore: release v${{ fromJSON(steps.changesets.outputs.publishedPackages)[0].version }}'
           publish: npm run release
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
