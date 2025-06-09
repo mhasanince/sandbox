@@ -1,9 +1,9 @@
-name: "Check Branch Name"
+name: 'Check Branch Name'
 
 on:
   push:
     branches-ignore:
-      - "main"
+      - 'main'
 
 jobs:
   check_branch_name:
