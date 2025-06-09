@@ -6,8 +6,9 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "lint": "eslint .",
     "preview": "vite preview",
+    "lint": "eslint .",
+    "format": "prettier --write .",
     "prepare": "husky",
     "check-branch-name": "node scripts/check-branch-name.js"
   },
@@ -37,7 +38,7 @@
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
       "eslint --fix",
-      "prettier --write"
+      "prettier --write --ignore-path .prettierignore ."
     ]
   }
 }
