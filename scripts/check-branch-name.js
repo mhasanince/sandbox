@@ -5,7 +5,7 @@ const branchName = execSync('git rev-parse --abbrev-ref HEAD')
   .toString()
   .trim();
 
-const regex = /^(JIRA-\d+)$/;
+const regex = /^(JIRA-\d+|main)$/;
 
 if (!regex.test(branchName)) {
   console.error(
