@@ -1,11 +1,11 @@
-import { execSync } from 'child_process';
 import chalk from 'chalk';
+import { execSync } from 'child_process';
 
 const branchName = execSync('git rev-parse --abbrev-ref HEAD')
   .toString()
   .trim();
 
-const regex = /^(JIRA-\d+|main|master|develop)$/;
+const regex = /^(JIRA-\d+)$/;
 
 if (!regex.test(branchName)) {
   console.error(
@@ -19,5 +19,6 @@ if (!regex.test(branchName)) {
   process.exit(1);
 }
 
+// eslint-disable-next-line no-console
 console.log(chalk.green('✅ Branch name is valid.'));
 process.exit(0);
