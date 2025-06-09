@@ -1,5 +1,6 @@
 // components
 export * from './components/button/Button';
+export * from './components/card/Card';
 
 // hooks
 export * from './hooks/use-debounce';

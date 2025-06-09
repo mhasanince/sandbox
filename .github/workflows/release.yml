@@ -35,7 +35,7 @@ jobs:
         run: npm ci
 
         # https://github.com/changesets/action
-      - name: Create Release or Publish to GPR
+      - name: Create Release or Publish to GitHub Packages
         id: changesets
         uses: changesets/action@v1
         with:
