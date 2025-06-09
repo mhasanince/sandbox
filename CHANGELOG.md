@@ -1,5 +1,11 @@
 # @mhasanince/sandbox
 
+## 0.1.2
+
+### Patch Changes
+
+- 56ca9f0: remove package.json private property
+
 ## 0.1.1
 
 ### Patch Changes
