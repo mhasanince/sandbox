@@ -24,6 +24,7 @@
     "format": "prettier --write .",
     "prepare": "husky",
     "changeset": "changeset",
+    "changeset:check": "changeset status --since=origin/main",
     "version-packages": "changeset version",
     "release": "npm run build && changeset publish",
     "check-branch-name": "node scripts/check-branch-name.js"
