@@ -1,6 +1,14 @@
 import chalk from 'chalk';
 import { execSync } from 'child_process';
 
+if (process.env.CI) {
+  // eslint-disable-next-line no-console
+  console.log(
+    chalk.green('✅ CI environment detected, skipping branch name check.'),
+  );
+  process.exit(0);
+}
+
 const branchName = execSync('git rev-parse --abbrev-ref HEAD')
   .toString()
   .trim();
