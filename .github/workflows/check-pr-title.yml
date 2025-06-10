@@ -3,6 +3,8 @@ name: 'Check PR Title'
 on:
   pull_request:
     types: [opened, edited, synchronize]
+    branches-ignore:
+      - 'changeset-release/main'
 
 jobs:
   check_pr_title:
