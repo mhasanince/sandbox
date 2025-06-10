@@ -6,6 +6,8 @@ on:
 
 jobs:
   check_pr_title:
+    if: github.event.pull_request.user.login != 'github-actions[bot]'
+
     runs-on: ubuntu-latest
     steps:
       - uses: actions/github-script@v7
