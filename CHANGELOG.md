@@ -1,5 +1,15 @@
 # @mhasanince/sandbox
 
+## 0.2.0
+
+### Minor Changes
+
+- 15c1bdb: fix workflows
+
+### Patch Changes
+
+- 81b285a: fix for github-actions[bot]
+
 ## 0.1.3
 
 ### Patch Changes
