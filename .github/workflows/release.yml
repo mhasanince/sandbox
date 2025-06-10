@@ -1,4 +1,4 @@
-name: 'Create Release PR'
+name: 'Release to GitHub Packages'
 
 on:
   push:
@@ -10,29 +10,35 @@ concurrency:
   cancel-in-progress: true
 
 permissions:
+  packages: write
   contents: write
   pull-requests: write
 
 jobs:
-  create-pr:
+  release:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
-      - name: Setup Node.js & npm
+      - name: Setup Node.js & npm for GitHub Packages
         uses: actions/setup-node@v4
         with:
           node-version: '20.x'
           cache: 'npm'
+          registry-url: 'https://npm.pkg.github.com'
+          scope: '@mhasanince'
 
       - name: Install dependencies
         run: npm ci
 
-      - name: Create Release Pull Request
+      - name: Create Release Pull Request or Publish to GitHub Packages
         id: changesets
         uses: changesets/action@v1
         with:
-          version: npm run version-packages
+          publish: npm run release
         env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
