@@ -4,6 +4,10 @@ on:
   pull_request_target:
     types: [opened, edited, synchronize]
 
+permissions:
+  pull-requests: write
+  statuses: write
+
 jobs:
   check_pr_title:
     if: github.event.pull_request.user.login != 'github-actions[bot]'
