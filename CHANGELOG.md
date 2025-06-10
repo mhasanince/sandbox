@@ -1,5 +1,11 @@
 # @mhasanince/sandbox
 
+## 0.2.0
+
+### Minor Changes
+
+- 15c1bdb: fix workflows
+
 ## 0.1.3
 
 ### Patch Changes
