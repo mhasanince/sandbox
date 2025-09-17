@@ -1,5 +1,6 @@
 export const Button = (
   props: React.ButtonHTMLAttributes<HTMLButtonElement>,
 ) => {
-  return <button {...props} />;
+  const { className, ...rest } = props;
+  return <button className={className} {...rest} />;
 };
