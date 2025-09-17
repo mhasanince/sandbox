@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 import { Button, Card, range } from '@/lib';
-import { Header } from '@/src/components/Header';
+import Header from '@/src/components/Header';
 
 function App() {
   const [count, setCount] = useState(() => range(0, 10));
