@@ -17,11 +17,6 @@ export default defineConfig({
       include: ['lib'],
     }),
   ],
-  resolve: {
-    alias: {
-      '@': path.resolve(__dirname, './'),
-    },
-  },
   build: {
     lib: {
       entry: path.resolve(__dirname, 'lib/index.ts'),
@@ -44,8 +39,12 @@ export default defineConfig({
       },
     },
     copyPublicDir: false,
-    sourcemap: true,
     minify: 'esbuild',
     emptyOutDir: true,
+  },
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, './'),
+    },
   },
 });
