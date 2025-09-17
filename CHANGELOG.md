@@ -1,5 +1,11 @@
 # @mhasanince/sandbox
 
+## 0.3.1
+
+### Patch Changes
+
+- 318e9d3: Update button props
+
 ## 0.3.0
 
 ### Minor Changes
